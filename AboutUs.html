@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RetroLand Homepage</title>
+    <title>About Us | RetroLand</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -62,21 +62,15 @@
       }
 
       main {
-        display: flex;
-        justify-content: space-between;
         padding: 50px;
       }
 
-      section {
-        width: 45%;
-      }
-
-      section h2 {
-        font-size: 2rem;
+      h1 {
+        font-size: 3rem;
         margin-bottom: 20px;
       }
 
-      section p {
+      p {
         font-size: 1.2rem;
         line-height: 1.5;
         margin-bottom: 30px;
@@ -105,33 +99,33 @@
   </head>
   <body>
     <header>
-        <img src="Logo.png" alt="Logo" width="755" height="400">
+      <h1>RetroLand</h1>
       <nav>
         <ul>
-            <li><a href="RETROland.html">Homepage</a></li>
+<nav>
+        <ul>
+            <li><a href="RETROland.hmtl">Homepage</a></li>
           <li><a href="AboutUs.html">About Us</a></li>
-          <li class="dropdown">
             <a href="#">All The Fun</a>
+            <li class="dropdown">
             <ul class="dropdown-menu">
-              <li class="dropdown-select" data-target="_blank"><a href="Tamaoriginal.html">Tamagotchis</a></li>
+             </li>
               <li class="dropdown-select" data-target="_blank"><a href="NintedoLand.html">Nintendo</a></li>
               <li class="dropdown-select" data-target="_blank"><a href="SEGA.html">Sega</a></li>
             </ul>
           </li>
         </ul>
       </nav>
+        </ul>
+      </nav>
     </header>
 
     <main>
-      <section id="about">
-        <h2>About Us</h2>
-        <p>We are RetroLand, a store that specializes in vintage video games and classic toys.</p>
-      </section>
-
-      <section id="coming soon">
-        <h2>Coming Soon</h2>
-        <p>Soon On RetroLand you will be able to sign up and talk with one another all on RetroLand!</p>
-      </section>
+      <h1>About Us</h1>
+      <p>We are RetroLand, a website that specializes in vintage video games and classic toys. Our love for all things retro started as a hobby, but has turned into a full-blown passion.</p>
+      <p>At RetroLand, we believe that classic games and toys are more than just items for nostalgia; they are a way to relive our childhood memories and create new ones with the next generation. That's why we are committed to providing high-quality, authentic information on these amazing consoles and toys.</p>
+      <p>With having the consoles and toys themselfes, we know the aspects</p>
+      <p>Thank you for choosing RetroLand, and we look forward to helping you know about your next treasure.</p>
     </main>
 
     <footer>
@@ -141,25 +135,5 @@
         <li><a href="#">Contact Us</a></li>
       </ul>
     </footer>
-
-    <script>
-      var dropdown = document.querySelectorAll(".dropdown-select");
-
-      // Loop through dropdown menus and add click event listeners
-      dropdown.forEach(function(select) {
-        select.addEventListener("click", function() {
-          // Get the ID of the selected section
-          var target = this.getAttribute("data-target");
-          // Redirect to the appropriate URL based on the ID
-          if (target === "tamagotchis") {
-            window.location.href = "Tamaoriginal.html";
-          } else if (target === "snes") {
-            window.location.href = "snes.html";
-          } else {
-            window.location.href = "index.html";
-          }
-        });
-      });
-    </script>
   </body>
 </html>
