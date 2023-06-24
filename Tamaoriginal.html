@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>The Original Tamagotchi - My Tamagotchi World</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+    <style>
+ {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #9B59B6;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Remove border and background color from header h1 */
+header h1 {
+    border: none;
+    background-color: transparent;
+    color: #8E44AD; /* Purple color that looks good with the background */
+}
+
+nav {
+	background-color: #8E44AD;
+	color: #fff;
+	padding: 10px;
+}
+
+/* Set the nested ul position to static */
+nav ul li {
+	margin-right: 20px;
+	position: relative;
+}
+
+nav ul li ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 10px;
+	list-style: none;
+}
+
+/* Add CSS for the nested ul li elements */
+nav ul li ul li {
+	display: inline-block;
+	padding: 10px;
+}
+
+/* Add CSS for the nested ul li a elements */
+nav ul li ul li a {
+	color: #8E44AD;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+/* Show the nested dropdown on hover */
+nav ul li:hover ul {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+}
+
+nav a {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px;
+}
+
+nav a:hover {
+	background-color: #fff;
+	color: #8E44AD;
+}
+
+main {
+	padding: 20px;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+section h2 {
+	color: #8E44AD;
+}
+
+section img {
+	max-width: 100%;
+	height: auto;
+}
+
+footer {
+	background-color: #9B59B6;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+    </style>
+<body>
+	<header>
+		<h1>My Tamagotchi World</h1>
+		<p>Your one-stop destination for everything Tamagotchi!</p>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="RETROland.html">Home</a></li>
+			<li><a href="#">Tamagotchis</a>
+				<ul>
+					<li><a href="Tamaoriginal.html">Original Tamagotchi</a></li>
+					<li><a href="connection.html">Tamagotchi Connection</a></li>
+					<li><a href="friends.html">Tamagotchi Friends</a></li>
+				</ul>
+			</li>
+			<li><a href="#">SNES</a>
+				<ul>
+					<li><a href="#">Super Mario World</a></li>
+					<li><a href="#">Donkey Kong Country</a></li>
+					<li><a href="#">Zelda: A Link to the Past</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About Us</a>
+				<ul>
+					<li><a href="#">Our Story</a></li>
+					<li><a href="#">Meet the Team</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<main>
+		<section id="original">
+			<h2>The Original Tamagotchi</h2>
+			<p>The original Tamagotchi, also known as the Generation One Tamagotchi, was first released in Japan in 1996. It was created by Bandai, a Japanese toy company, and quickly became a worldwide phenomenon. In 1997, it was released in the United States and a year later in Europe, with other regions following soon after.</p>
+			<p>The original Tamagotchi was a virtual pet that required constant attention and care. The device had an LCD screen on which you could see the pet and interact with it. You had to feed it, play with it, and put it to sleep, all in order to keep it happy and healthy. If you neglected it for too long, it would die, forcing you to start over with a new pet.</p>
+			<p>The original Tamagotchi came in a variety of colors and designs, with different characters and personalities. It was a huge hit among children and adults alike, and it has since become a beloved icon of the 1990s.</p>
+			<img src="tamaoriginal.jpg" alt="A picture of the original Tamagotchi">
+		</section>
+	</main>
+
+</body>
+
+</html>

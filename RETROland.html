@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RetroLand Homepage</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #2d2d2d;
+        color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+      }
+
+      nav ul li {
+        position: relative;
+      }
+
+      nav ul li a {
+        color: #ffffff;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+
+      nav ul ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+      }
+
+      nav ul li:hover > ul {
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav ul ul li a {
+        color: #2d2d2d;
+        background-color: #ffffff;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+
+      nav ul ul li a:hover {
+        color: #ffffff;
+        background-color: #2d2d2d;
+      }
+
+      main {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+      }
+
+      section {
+        width: 45%;
+      }
+
+      section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      section p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+
+      footer {
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+
+      footer ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+
+      footer ul li a {
+        color: #2d2d2d;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+
+      footer ul li a:hover {
+        background-color: #2d2d2d;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>RetroLand</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Explore</a>
+            <ul>
+              <li><a href="Tamaoriginal.html">Tamagotchis</a></li>
+              <li><a href="Tamaoriginal.html">SNES</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Tamagotchis</h2>
+        <p>Looking for the iconic digital pet that took the world by storm in the late 90s? Look no further! We have a wide range of Tamagotchis and accessories for you to choose from. Relive the nostalgia and get your own digital pet today!</p>
+      </section>
+      <section>
+        <h2>SNES</h2>
+        <p>Are you a retro gaming enthusiast? Do you miss playing your favorite games from the Super Nintendo Entertainment System (SNES)? We've got you covered! You can find a variety of SNES consoles, controllers, and games on our website. Relive the good old days and play some of the best games in console gaming history.</p>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Social Media</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script>
+      const dropdownMenu = document.querySelector('header nav ul');
+      dropdownMenu.addEventListener('click', function(event) {
+        event.preventDefault();
+        const clickedLink = event.target;
+        const dropdownLinks = document.querySelectorAll('header nav ul a');
+        const dropdownLinksArray = Array.from(dropdownLinks);
+        const sectionIDs = ['tamagotchis.html', 'snes.html'];
+        let linkIndex;
+
+        for (let i = 0; i < dropdownLinksArray.length; i++) {
+          if (clickedLink === dropdownLinksArray[i]) {
+            linkIndex = i;
+          }
+        }
+
+        for (let i = 0; i < dropdownLinks.length; i++) {
+          dropdownLinks[i].classList.remove('active');
+        }
+
+        for (let i = 0; i < sectionIDs.length; i++) {
+          if (linkIndex === i) {
+            window.location.href = sectionIDs[i];
+          }
+        }
+
+        clickedLink.classList.add('active');
+      });
+    </script>
+  </body>
+</html>
