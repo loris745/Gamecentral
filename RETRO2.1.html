@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RetroLand Homepage</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #2d2d2d;
+        color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+      }
+
+      nav ul li {
+        position: relative;
+      }
+
+      nav ul li a {
+        color: #ffffff;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+
+      nav ul ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+      }
+
+      nav ul li:hover > ul {
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav ul ul li a {
+        color: #2d2d2d;
+        background-color: #ffffff;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+
+      nav ul ul li a:hover {
+        color: #ffffff;
+        background-color: #2d2d2d;
+      }
+
+      main {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+      }
+
+      section {
+        width: 45%;
+      }
+
+      section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      section p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+
+      footer {
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+
+      footer ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+
+      footer ul li a {
+        color: #2d2d2d;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+            <li><a href="RETRO.html">Homepage</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="#">All The Fun</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-select" data-target="_blank"><a href="Tamaoriginal.html">Tamagotchis</a></li>
+              <li class="dropdown-select" data-target="_blank"><a href="NintedoLand.html">Nintendo</a></li>
+              <li class="dropdown-select" data-target="_blank"><a href="SEGA.html">Sega</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to RetroLand! Here at RetroLand we like to think big, with tons of useful content and 1 on 1 help with products..</p>
+      </section>
+
+      <section id="coming soon">
+        <h2>Coming Soon</h2>
+        <p>Coming soon to RetroLand, you'll be able to sign up and talk with one another right on the site!</p>
+          <h2>Contact Us</h2>
+          <p>Contact us at lorisalati@gmail.com</p>
+      </section>
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="LegalInfo.html">Legal Info</a></li>
+      </ul>
+    </footer>
+
+    <script>
+      var dropdown = document.querySelectorAll(".dropdown-select");
+
+      // Loop through dropdown menus and add click event listeners
+      dropdown.forEach(function(select) {
+        select.addEventListener("click", function() {
+          // Get the ID of the selected section
+          var target = this.getAttribute("data-target");
+          // Redirect to the appropriate URL based on the ID
+          if (target === "tamagotchis") {
+            window.location.href = "Tamaoriginal.html";
+          } else if (target === "snes") {
+            window.location.href = "snes.html";
+          } else {
+            window.location.href = "index.html";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
